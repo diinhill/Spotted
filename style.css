@@ -1,0 +1,395 @@
+/* video on loop, animated ufo.png, js particles */
+.video-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('images/starryNight.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+.stopfade {
+    opacity: .5;
+}
+
+.ufo {
+    z-index: 9999;
+    position: absolute;
+    display: flex;
+    top: 37%;
+    left: 43%;
+    animation: ufo 5s ease-in-out 0s infinite alternate none running;
+    cursor: pointer;
+}
+
+@keyframes ufo {
+    0% {
+        transform: translateX(0px) rotate(0deg) translateY(0px) scale(100%);
+    }
+
+    25% {
+        transform: translateX(10px) rotate(10deg) translateY(10px);
+
+    }
+
+    50% {
+        transform: translateX(0px) rotate(0deg) translateY(0px);
+
+    }
+
+    100% {
+        transform: translateX(-10px) rotate(-10deg) translateY(-10px) scale(50%);
+    }
+}
+
+.warp {
+    z-index: 9999;
+    position: absolute;
+    display: flex;
+    top: 37%;
+    left: 43%;
+    animation: warp 6s ease-in 0s 1 normal forwards running;
+}
+
+@keyframes warp {
+    0% {
+        transform: translateX(0px) rotate(0deg) translateY(0px) translateZ(9999) scale(100%);
+    }
+
+    25% {
+        transform: translateX(10px) rotate(10deg) translateY(10px) translateZ(6000);
+
+    }
+
+    50% {
+        transform: translateX(0px) rotate(0deg) translateY(0px) translateZ(3000);
+
+    }
+
+    100% {
+        transform: translateX(-10px) rotate(-10deg) translateY(-10px) translateZ(0) scale(0%);
+    }
+}
+
+canvas {
+    display: block;
+    /* vertical-align: bottom; */
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---- stats.js ---- */
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+    /* -webkit-user-select: none;  */
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
+
+
+
+/* searchfield with dropdown and checkboxes */
+.row {
+    margin-top: 5rem;
+}
+
+.search-container {
+    z-index: 50;
+    display: none;
+    position: relative;
+    border: .1rem solid lightgrey;
+    font-family: 'Space Mono', monospace;
+    padding: .2rem;
+    width: 18rem;
+    top: 3rem;
+    animation: search-container 3s ease-in-out 0s infinite alternate running;
+}
+
+.form-select {
+    display: inline;
+    border-radius: unset;
+}
+
+.form-check-label {
+    color: rgba(244, 245, 255, 0.911);
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.form-check-input {
+    margin-top: .7em;
+}
+
+.form-check-input:checked {
+    background-color: #07101d;
+    border-color: #ced4da;
+}
+
+.header-container {
+    z-index: -100;
+    font-family: 'Space Mono', monospace;
+    font-weight: lighter;
+    font-size: x-large;
+    color: rgba(244, 245, 255, 0.911);
+    position: fixed;
+    top: 4rem;
+    left: 2rem;
+    display: none;
+    animation: header-container 3s ease-in-out 0s infinite alternate running;
+}
+
+@media only screen and (max-width: 600px) {
+    h2 {
+        display: none;
+    }
+}
+
+@keyframes search-container {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@keyframes header-container {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+        color: rgb(115, 118, 134)
+    }
+}
+
+
+
+
+/* cards design */
+.card {
+    width: 18rem;
+    height: 18rem;
+    border: unset;
+    margin-bottom: 2rem;
+}
+
+.card-img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border: 0.11rem solid rgba(109, 109, 139, 0.808);
+}
+
+.card-iframe {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border: 0.11rem solid rgba(109, 109, 139, 0.808);
+}
+
+.card-body {
+    width: 18rem;
+    height: 18rem;
+    visibility: hidden;
+    z-index: 100;
+    transition: width 0.1s, height 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+.card-body:hover {
+    width: 18.5rem;
+    height: 18.5rem;
+    justify-self: center;
+    align-self: center;
+    margin-top: -0.28rem;
+    margin-left: -0.33rem;
+    background-color: rgba(2, 7, 20, 0.781);
+    box-shadow: 0.15rem 0.15rem 0.4rem 0.1rem rgb(96, 99, 114);
+    border-radius: .25rem;
+    color: rgba(244, 245, 255, 0.911);
+}
+
+.card-title {
+    font-size: 2em;
+    padding-left: 1.5em;
+    padding-right: 0.35em;
+    top: 0.2em;
+    color: rgba(244, 245, 255, 0.911);
+    text-align: right;
+    font-family: 'Play', sans-serif;
+}
+
+.btn {
+    color: rgba(244, 245, 255, 0.911);
+}
+
+.card-subtitle {
+    font-size: 0.8em;
+}
+
+.blockquote {
+    font-size: 0.6em;
+    padding-right: 0.8em;
+}
+
+.card-link {
+    padding-left: 1.5em;
+    padding-right: 0.35em;
+    margin-bottom: 2em;
+    color: rgba(244, 245, 255, 0.911);
+    text-align: right;
+    font-family: 'Play', sans-serif;
+}
+
+
+/* modal images + videos design */
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.fade:not(.show) {
+    opacity: 100;
+}
+
+.modal-dialog {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(211, 211, 223, 0.452);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-body {
+    max-height: 90%;
+    max-width: 90%;
+    padding: unset;
+    margin: auto;
+    position: relative;
+    background-color: rgba(24, 24, 44, 0.452);
+    border: 0.11rem solid rgba(173, 173, 173, 0.911);
+    box-shadow: 1rem 1rem 5rem rgb(14, 13, 26);
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+}
+
+.modal-body-iframe {
+    width: 100%;
+    background-color: rgba(24, 24, 44, 0.452);
+    border: 0.11rem solid rgba(173, 173, 173, 0.911);
+    box-shadow: 1rem 1rem 5rem rgb(14, 13, 26);
+}
+
+.airtable-embed {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-header {
+    width: 90%;
+    padding: 0em 0.5em;
+    background-color: rgba(8, 8, 36, 0.39);
+    color: rgba(244, 245, 255, 0.911);
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.modal-iframe-header {
+    width: 100%;
+    padding: 0em 0.5em;
+    background-color: rgba(8, 8, 36, 0.39);
+    color: rgba(244, 245, 255, 0.911);
+    font-family: 'Space Mono', monospace;
+    position: relative;
+}
+
+.close {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    min-width: 3ch;
+    min-height: 44px;
+}
+
+.buttonSpan {
+    text-align: center;
+    line-height: 1.7rem;
+    padding-bottom: 0.3em;
+    color: rgba(244, 245, 255, 0.911);
+    font-family: 'Space Mono', monospace;
+    font-weight: lighter;
+    font-size: x-large;
+    transition: 220ms all ease-in-out;
+    transition: width 0.1s, height 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+.buttonSpan:hover {
+    background-color: rgba(255, 255, 255, 0.678);
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+    margin-right: -0.1em;
+    font-size: xx-large;
+    border: 2em rgb(121, 123, 139);
+    box-shadow: 0.1em 0 0.1em 0.1em rgba(0, 0, 0, 0.212);
+    color: rgba(43, 49, 83, 0.925);
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotted</title>
+
+    <link rel="pre-connect" href="https://fonts.googleapis.com" />
+    <link rel="pre-connect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+    <link href="https://www.1001fonts.com/alenia-font.html" rel="stylesheet" />
+    <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link>
+</head>
+
+<body>
+    <div id="bgVideo" class="video-container">
+        <video id="starryBgLoop" controls preload="true" autoplay loop muted>
+            <source src="bg video source/foo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="ufo" class="ufo">
+        <img id="ufoImage"
+            src="https://www.freepnglogos.com/uploads/ufo-png/ufo-spaceship-flying-saucer-transparent-png-stickpng-14.png"
+            width="200" alt="ufo spaceship flying saucer transparent png stickpng" />
+    </div>
+
+    <div id="headerDataPage" class="header-container">
+        <h2>S</h2>
+        <h2>P</h2>
+        <h2>O</h2>
+        <h2>T</h2>
+        <h2>T</h2>
+        <h2>E</h2>
+        <h2>D</h2>
+    </div>
+
+    <div id="popUpImages" class="container"></div>
+
+    <div id="row-container" class="container">
+        <div id="searchContainer" class="search-container">
+            <select id="dropdownMenu" class="form-select" aria-label="Default select example">
+                <option selected>select media type</option>
+                <option value="all">all</option>
+                <hr class="dropdown-divider">
+            </select>
+            <div id="checkboxMenu" class="form-check-container"></div>
+        </div>
+        <div id="row" class="row"></div>
+    </div>
+
+    <!-- particles.js container -->
+    <div id="particles-js"></div> <!-- stats - count particles -->
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="particle.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <!-- <script src="response.js"></script> -->
+    <script src="main.js"></script>
+</body>
+
+</html>
