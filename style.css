@@ -134,6 +134,11 @@ canvas {
 .row {
     margin-left: 7rem;
     margin-top: -15rem;
+    margin-right: 7rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .search-container {
@@ -149,6 +154,17 @@ canvas {
 }
 
 .form-select {
+    display: inline;
+    border-radius: unset;
+}
+
+.form-outline {}
+
+.form-control {
+    width: 18rem;
+}
+
+.form-label {
     display: inline;
     border-radius: unset;
 }
