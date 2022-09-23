@@ -132,7 +132,8 @@ canvas {
 
 /* searchfield with dropdown and checkboxes */
 .row {
-    margin-top: 5rem;
+    margin-left: 7rem;
+    margin-top: -15rem;
 }
 
 .search-container {
@@ -143,7 +144,7 @@ canvas {
     font-family: 'Space Mono', monospace;
     padding: .2rem;
     width: 18rem;
-    top: 3rem;
+    top: .5rem;
     animation: search-container 3s ease-in-out 0s infinite alternate running;
 }
 
