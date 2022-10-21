@@ -26,7 +26,6 @@ async function controller() {
 
     createDropdownMenu(dataList)
     searchContainerEventListeners(dataList)
-    createCards(dataList)
 }
 controller()
 
@@ -60,6 +59,23 @@ const filterByMenu = (list) => {
     const dropdownMenuValue = document.getElementById("dropdownMenu").value
     console.log("dropdownMenuValue", dropdownMenuValue)
 
+    const searchInput = document.getElementById("searchInput").value
+    console.log("searchInput", searchInput)
+
+    /* list.forEach(listItem => {
+        console.log("explanation", listItem.explanation)
+        console.log("explanation type", typeof listItem.explanation)
+    }) */
+
+    const filteredList = list.filter(listItem => {
+        for (let i = 0; i < list.length; i++) {
+            if (searchInput === "" || listItem.explanation.search(searchInput) !== -1) {
+                return listItem.media_type === dropdownMenuValue || dropdownMenuValue === "all"
+            }
+        }
+    })
+
+    createCards(filteredList)
 }
 
 const createCards = (list) => {
