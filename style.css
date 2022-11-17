@@ -131,16 +131,6 @@ canvas {
 
 
 /* searchfield with dropdown and checkboxes */
-.row {
-    margin-left: 7rem;
-    margin-top: -15rem;
-    margin-right: 7rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
 .search-container {
     z-index: 50;
     display: none;
@@ -179,7 +169,7 @@ canvas {
     font-size: x-large;
     color: rgba(244, 245, 255, 0.911);
     position: fixed;
-    top: 5.5rem;
+    top: 6rem;
     left: 2rem;
     display: none;
     animation: header-container 3s ease-in-out 0s infinite alternate running;
@@ -216,6 +206,16 @@ canvas {
 
 
 /* cards design */
+.row {
+    margin-left: 7rem;
+    margin-top: 2.5rem;
+    margin-right: 7rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .card {
     width: 18rem;
     height: 18rem;
@@ -238,17 +238,10 @@ canvas {
 }
 
 .card-body {
-    width: 18rem;
-    height: 18rem;
     visibility: hidden;
-    z-index: 100;
-    transition: width 0.1s, height 0.1s;
-    transition-timing-function: ease-in-out;
-}
-
-.card-body:hover {
     width: 18.5rem;
     height: 18.5rem;
+    z-index: 100;
     justify-self: center;
     align-self: center;
     margin-top: -0.28rem;
@@ -257,9 +250,16 @@ canvas {
     box-shadow: 0.15rem 0.15rem 0.4rem 0.1rem rgb(96, 99, 114);
     border-radius: .25rem;
     color: rgba(244, 245, 255, 0.911);
+    transition: width 0.1s, height 0.1s;
+    transition-timing-function: ease-in-out;
+    position: absolute;
 }
 
-.card-title {
+/* .card-body:hover {
+    visibility: visible;
+} */
+
+/* .card-title {
     font-size: 2em;
     padding-left: 1.5em;
     padding-right: 0.35em;
@@ -267,59 +267,51 @@ canvas {
     color: rgba(244, 245, 255, 0.911);
     text-align: right;
     font-family: 'Play', sans-serif;
-}
+} */
 
-.btn {
+/* .btn {
     color: rgba(244, 245, 255, 0.911);
-}
+} */
 
-.card-subtitle {
+/* .card-subtitle {
     font-size: 0.8em;
-}
+} */
 
-.blockquote {
+/* .blockquote {
     font-size: 0.6em;
     padding-right: 0.8em;
-}
+} */
 
-.card-link {
-    padding-left: 1.5em;
-    padding-right: 0.35em;
-    margin-bottom: 2em;
-    color: rgba(244, 245, 255, 0.911);
-    text-align: right;
-    font-family: 'Play', sans-serif;
-}
 
 
 /* modal images + videos design */
-.modal {
+/* .modal {
     display: block;
     position: fixed;
     top: 0;
     left: 0;
-}
+} */
 
-.fade:not(.show) {
+/* .fade:not(.show) {
     opacity: 100;
-}
+} */
 
-.modal-dialog {
+/* .modal-dialog {
     position: absolute;
     width: 100%;
     height: 100%;
-}
+} */
 
-.modal-content {
+/* .modal-content {
     width: 100%;
     height: 100%;
     background-color: rgba(211, 211, 223, 0.452);
     position: relative;
     display: flex;
     flex-direction: row;
-}
+} */
 
-.modal-body {
+/* .modal-body {
     max-height: 90%;
     max-width: 90%;
     padding: unset;
@@ -328,26 +320,26 @@ canvas {
     background-color: rgba(24, 24, 44, 0.452);
     border: 0.11rem solid rgba(173, 173, 173, 0.911);
     box-shadow: 1rem 1rem 5rem rgb(14, 13, 26);
-}
+} */
 
-.modal-image {
+/* .modal-image {
     width: 100%;
     height: auto;
-}
+} */
 
-.modal-body-iframe {
+/* .modal-body-iframe {
     width: 100%;
     background-color: rgba(24, 24, 44, 0.452);
     border: 0.11rem solid rgba(173, 173, 173, 0.911);
     box-shadow: 1rem 1rem 5rem rgb(14, 13, 26);
-}
+} */
 
-.airtable-embed {
+/* .airtable-embed {
     width: 100%;
     height: 100%;
-}
+} */
 
-.modal-header {
+/* .modal-header {
     width: 90%;
     padding: 0em 0.5em;
     background-color: rgba(8, 8, 36, 0.39);
@@ -356,26 +348,26 @@ canvas {
     display: flex;
     justify-content: space-between;
     position: fixed;
-}
+} */
 
-.modal-iframe-header {
+/* .modal-iframe-header {
     width: 100%;
     padding: 0em 0.5em;
     background-color: rgba(8, 8, 36, 0.39);
     color: rgba(244, 245, 255, 0.911);
     font-family: 'Space Mono', monospace;
     position: relative;
-}
+} */
 
-.close {
+/* .close {
     background-color: transparent;
     display: flex;
     align-items: center;
     min-width: 3ch;
     min-height: 44px;
-}
+} */
 
-.buttonSpan {
+/* .buttonSpan {
     text-align: center;
     line-height: 1.7rem;
     padding-bottom: 0.3em;
@@ -386,9 +378,9 @@ canvas {
     transition: 220ms all ease-in-out;
     transition: width 0.1s, height 0.1s;
     transition-timing-function: ease-in-out;
-}
+} */
 
-.buttonSpan:hover {
+/* .buttonSpan:hover {
     background-color: rgba(255, 255, 255, 0.678);
     padding-right: 0.2em;
     padding-left: 0.2em;
@@ -397,4 +389,4 @@ canvas {
     border: 2em rgb(121, 123, 139);
     box-shadow: 0.1em 0 0.1em 0.1em rgba(0, 0, 0, 0.212);
     color: rgba(43, 49, 83, 0.925);
-}
+} */
