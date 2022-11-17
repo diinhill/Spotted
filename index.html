@@ -43,15 +43,13 @@
 
     <div id="row-container" class="container">
         <div id="searchContainer" class="search-container">
+            <label class="form-label" for="search-container">search by</label>
             <select id="dropdownMenu" class="form-select" aria-label="Default select example">
-                <option selected>select media type</option>
+                <option selected>media type</option>
                 <option value="all">all</option>
                 <hr class="dropdown-divider">
             </select>
-            <div id="inputMenu" class="form-outline">
-                <input type="string" id="searchInput" class="form-control" />
-                <label class="form-label" for="searchInput">search by keyword</label>
-            </div>
+            <input type="string" id="searchInput" class="form-control" placeholder="keyword" />
         </div>
         <div id="row" class="row"></div>
     </div>

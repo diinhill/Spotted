@@ -3,12 +3,13 @@ const url = "https://api.nasa.gov/planetary/apod?api_key=L7oEY6qKz8bakbdW7e1Agsc
 
 const starryBgLoop = document.getElementById("starryBgLoop")
 console.log(starryBgLoop.playbackRate)
-const searchContainer = document.getElementById("searchContainer")
 const particlesJs = document.getElementById("particles-js")
-const headerDataPage = document.getElementById("headerDataPage")
 const ufo = document.getElementById("ufo")
 const ufoImage = document.getElementById("ufoImage")
 ufoImage.addEventListener("click", warp)
+
+const headerDataPage = document.getElementById("headerDataPage")
+const searchContainer = document.getElementById("searchContainer")
 
 
 const getData = async () => {
@@ -28,7 +29,6 @@ async function controller() {
     searchContainerEventListeners(dataList)
 }
 controller()
-
 
 const createDropdownMenu = (list) => {
     const dropdownMenu = document.getElementById("dropdownMenu")
@@ -79,7 +79,6 @@ const filterByMenu = (list) => {
 }
 
 const createCards = (list) => {
-
     let row = document.getElementById("row")
     let popUpImages = document.getElementById("popUpImages")
     row.innerHTML = ""

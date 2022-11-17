@@ -146,42 +146,30 @@ canvas {
     display: none;
     position: relative;
     border: .1rem solid lightgrey;
-    font-family: 'Space Mono', monospace;
     padding: .2rem;
     width: 18rem;
     top: .5rem;
     animation: search-container 3s ease-in-out 0s infinite alternate running;
 }
 
+.form-label {
+    color: rgba(244, 245, 255, 0.911);
+    margin-bottom: .5em;
+    font-family: 'Space Mono', monospace;
+}
+
 .form-select {
     display: inline;
     border-radius: unset;
+    font-family: 'Space Mono', monospace;
+    color: rgb(108, 108, 108);
 }
-
-.form-outline {}
 
 .form-control {
-    width: 18rem;
-}
-
-.form-label {
     display: inline;
     border-radius: unset;
-}
-
-.form-check-label {
-    color: rgba(244, 245, 255, 0.911);
-    margin-top: .5em;
-    margin-bottom: .5em;
-}
-
-.form-check-input {
-    margin-top: .7em;
-}
-
-.form-check-input:checked {
-    background-color: #07101d;
-    border-color: #ced4da;
+    width: 17.5rem;
+    font-family: 'Space Mono', monospace;
 }
 
 .header-container {
@@ -191,7 +179,7 @@ canvas {
     font-size: x-large;
     color: rgba(244, 245, 255, 0.911);
     position: fixed;
-    top: 4rem;
+    top: 5.5rem;
     left: 2rem;
     display: none;
     animation: header-container 3s ease-in-out 0s infinite alternate running;
