@@ -259,59 +259,62 @@ canvas {
     visibility: visible;
 } */
 
-/* .card-title {
+.card-title {
     font-size: 2em;
     padding-left: 1.5em;
     padding-right: 0.35em;
-    top: 0.2em;
+    top: 0.25em;
     color: rgba(244, 245, 255, 0.911);
     text-align: right;
     font-family: 'Play', sans-serif;
-} */
+    position: absolute;
+}
 
-/* .btn {
+.btn {
     color: rgba(244, 245, 255, 0.911);
-} */
+}
 
-/* .card-subtitle {
-    font-size: 0.8em;
-} */
-
-/* .blockquote {
-    font-size: 0.6em;
-    padding-right: 0.8em;
-} */
+.blockquote {
+    font-size: 0.7em;
+    padding-left: 0.9em;
+    bottom: 0.5em;
+    color: rgba(244, 245, 255, 0.911);
+    font-family: 'Play', sans-serif;
+    position: absolute;
+}
 
 
 
 /* modal images + videos design */
-/* .modal {
+.modal {
     display: block;
     position: fixed;
     top: 0;
     left: 0;
-} */
+    z-index: 100;
+}
 
-/* .fade:not(.show) {
+.fade:not(.show) {
     opacity: 100;
-} */
+}
 
-/* .modal-dialog {
-    position: absolute;
+.modal-dialog {
+    position: fixed;
     width: 100%;
     height: 100%;
-} */
+}
 
-/* .modal-content {
+.modal-content {
     width: 100%;
     height: 100%;
     background-color: rgba(211, 211, 223, 0.452);
     position: relative;
     display: flex;
     flex-direction: row;
-} */
+}
 
-/* .modal-body {
+.modal-body {
+    display: flex;
     max-height: 90%;
     max-width: 90%;
     padding: unset;
@@ -320,56 +323,62 @@ canvas {
     background-color: rgba(24, 24, 44, 0.452);
     border: 0.11rem solid rgba(173, 173, 173, 0.911);
     box-shadow: 1rem 1rem 5rem rgb(14, 13, 26);
-} */
+}
 
-/* .modal-image {
+.modal-image {
     width: 100%;
     height: auto;
-} */
+    object-fit: cover;
+}
 
-/* .modal-body-iframe {
+.modal-body-iframe {
     width: 100%;
     background-color: rgba(24, 24, 44, 0.452);
     border: 0.11rem solid rgba(173, 173, 173, 0.911);
     box-shadow: 1rem 1rem 5rem rgb(14, 13, 26);
-} */
+}
 
-/* .airtable-embed {
+.airtable-embed {
     width: 100%;
     height: 100%;
-} */
+}
 
-/* .modal-header {
-    width: 90%;
-    padding: 0em 0.5em;
-    background-color: rgba(8, 8, 36, 0.39);
+.modal-header {
+    /* background-color: rgba(8, 8, 36, 0.39); */
+    background-color: rgb(2, 2, 31);
     color: rgba(244, 245, 255, 0.911);
     font-family: 'Space Mono', monospace;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    position: fixed;
-} */
+    position: absolute;
+}
 
-/* .modal-iframe-header {
-    width: 100%;
+.modal-title {
     padding: 0em 0.5em;
-    background-color: rgba(8, 8, 36, 0.39);
+}
+
+.modal-iframe-header {
+    /* width: 100%;
+    padding: 0em 0.5em; */
+    /* background-color: rgba(8, 8, 36, 0.39); */
+    background-color: rgb(2, 2, 31);
     color: rgba(244, 245, 255, 0.911);
     font-family: 'Space Mono', monospace;
     position: relative;
-} */
+}
 
-/* .close {
+.close {
     background-color: transparent;
     display: flex;
     align-items: center;
     min-width: 3ch;
     min-height: 44px;
-} */
+}
 
-/* .buttonSpan {
+.buttonSpan {
     text-align: center;
-    line-height: 1.7rem;
+    /* line-height: 1.7rem; */
     padding-bottom: 0.3em;
     color: rgba(244, 245, 255, 0.911);
     font-family: 'Space Mono', monospace;
@@ -378,15 +387,15 @@ canvas {
     transition: 220ms all ease-in-out;
     transition: width 0.1s, height 0.1s;
     transition-timing-function: ease-in-out;
-} */
+}
 
-/* .buttonSpan:hover {
+.buttonSpan:hover {
     background-color: rgba(255, 255, 255, 0.678);
     padding-right: 0.2em;
     padding-left: 0.2em;
-    margin-right: -0.1em;
+    margin-right: 0.1em;
     font-size: xx-large;
     border: 2em rgb(121, 123, 139);
     box-shadow: 0.1em 0 0.1em 0.1em rgba(0, 0, 0, 0.212);
     color: rgba(43, 49, 83, 0.925);
-} */
+}
