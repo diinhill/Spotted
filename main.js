@@ -1,5 +1,5 @@
 
-const url = "https://api.nasa.gov/planetary/apod?api_key=L7oEY6qKz8bakbdW7e1AgscrSg3QazwqRta89PG7&start_date=2022-08-21"
+const url = "https://api.nasa.gov/planetary/apod?api_key=L7oEY6qKz8bakbdW7e1AgscrSg3QazwqRta89PG7&count=69&thumbs=True"
 
 const starryBgLoop = document.getElementById("starryBgLoop")
 console.log(starryBgLoop.playbackRate)
@@ -158,10 +158,10 @@ const createCards = (list) => {
 
         }
         else if (listItem.media_type == "video") {
-            const cardIframe = document.createElement("iframe")
-            cardIframe.setAttribute("src", listItem.url)
-            cardIframe.setAttribute("class", "card-iframe embed-responsive-item")
-            card.appendChild(cardIframe)
+            const cardVideoThumbnail = document.createElement("img")
+            cardVideoThumbnail.setAttribute("src", listItem.thumbnail_url)
+            cardVideoThumbnail.classList = "card-img embed-responsive-item"
+            card.appendChild(cardVideoThumbnail)
             card.addEventListener("click", videoEnlarge)
         }
 
