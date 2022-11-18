@@ -65,7 +65,7 @@ controller()
 const createDropdownMenu = (list) => {
     const dropdownMenu = document.getElementById("dropdownMenu")
     const mediaTypes = list.map(e => e.media_type)
-    console.log("mediaTypes", mediaTypes)
+    // console.log("mediaTypes", mediaTypes)
     const uniqueMediaTypes = [... new Set(mediaTypes)]
     console.log("uniqueMediaTypes", uniqueMediaTypes)
     uniqueMediaTypes.forEach(mediaType => {
@@ -81,7 +81,7 @@ const searchContainerEventListeners = (list) => {
         .addEventListener("change", (event) => {
             filterByMenu(list)
         })
-    document.getElementById("inputMenu")
+    document.getElementById("searchInput")
         .addEventListener("input", (event) => {
             filterByMenu(list)
         })
@@ -93,12 +93,11 @@ const filterByMenu = (list) => {
 
     const searchInput = document.getElementById("searchInput").value
     console.log("searchInput", searchInput)
+    console.log("searchInput length", searchInput.length)
 
     const filteredList = list.filter(listItem => {
-        for (let i = 0; i < list.length; i++) {
-            if (searchInput === "" || listItem.explanation.search(searchInput) !== -1) {
-                return listItem.media_type === dropdownMenuValue || dropdownMenuValue === "all"
-            }
+        if (searchInput.length = 0 || listItem.explanation.search(searchInput) !== -1) {
+            return listItem.media_type === dropdownMenuValue || dropdownMenuValue === "all"
         }
     })
 
