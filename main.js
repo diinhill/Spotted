@@ -12,14 +12,41 @@ const headerDataPage = document.getElementById("headerDataPage")
 const searchContainer = document.getElementById("searchContainer")
 
 
+
+//// ufo click-event to get to main page ////
+
+function warp() {
+    starryBgLoop.playbackRate = 10
+    ufo.classList.replace("ufo", "warp")
+
+    function noUfo() {
+        ufo.style.display = "none"
+        starryBgLoop.playbackRate = 1
+        particlesJs.style.display = "none"
+        headerDataPage.style.display = "block"
+        searchContainer.style.display = "grid"
+    }
+    setTimeout(noUfo, 6000)
+}
+////////
+
+
+
+//// fetch data ////
+
 const getData = async () => {
     const response = await fetch(url)
     console.log("response", response)
     const data = await response.json()
-    console.log("data", data)
+    // console.log("data", data)
 
     return data
 }
+////////
+
+
+
+//// controller function ////
 
 async function controller() {
     const dataList = await getData()
@@ -29,6 +56,11 @@ async function controller() {
     searchContainerEventListeners(dataList)
 }
 controller()
+////////
+
+
+
+//// search in data list via combined filters ////
 
 const createDropdownMenu = (list) => {
     const dropdownMenu = document.getElementById("dropdownMenu")
@@ -62,11 +94,6 @@ const filterByMenu = (list) => {
     const searchInput = document.getElementById("searchInput").value
     console.log("searchInput", searchInput)
 
-    /* list.forEach(listItem => {
-        console.log("explanation", listItem.explanation)
-        console.log("explanation type", typeof listItem.explanation)
-    }) */
-
     const filteredList = list.filter(listItem => {
         for (let i = 0; i < list.length; i++) {
             if (searchInput === "" || listItem.explanation.search(searchInput) !== -1) {
@@ -77,6 +104,11 @@ const filterByMenu = (list) => {
 
     createCards(filteredList)
 }
+////////
+
+
+
+//// display filtered data list ////
 
 const createCards = (list) => {
     let row = document.getElementById("row")
@@ -210,7 +242,7 @@ const createCards = (list) => {
             popUpImages.appendChild(modalImages)
 
             const modalDialog = document.createElement("div")
-            modalDialog.setAttribute("class", "modal-dialog modal-fullscreen")
+            modalDialog.setAttribute("class", "modal-dialog")
             modalDialog.setAttribute("role", "document")
             modalImages.appendChild(modalDialog)
 
@@ -258,18 +290,5 @@ const createCards = (list) => {
         }
     })
 }
+////////
 
-
-function warp() {
-    starryBgLoop.playbackRate = 10
-    ufo.classList.replace("ufo", "warp")
-
-    function noUfo() {
-        ufo.style.display = "none"
-        starryBgLoop.playbackRate = 1
-        particlesJs.style.display = "none"
-        headerDataPage.style.display = "block"
-        searchContainer.style.display = "grid"
-    }
-    setTimeout(noUfo, 6000)
-}

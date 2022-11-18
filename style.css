@@ -1,4 +1,4 @@
-/* video on loop, animated ufo.png, js particles */
+/** background-video on loop **/
 .video-container {
     position: fixed;
     top: 50%;
@@ -12,12 +12,19 @@
     background: url('images/starryNight.jpg') no-repeat;
     background-size: cover;
     transition: 1s opacity;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .stopfade {
     opacity: .5;
 }
 
+/****/
+
+
+/** animated ufo **/
 .ufo {
     z-index: 9999;
     position: absolute;
@@ -77,12 +84,10 @@
     }
 }
 
-canvas {
-    display: block;
-    /* vertical-align: bottom; */
-}
+/****/
 
-/* ---- particles.js container ---- */
+
+/** particles.js container **/
 #particles-js {
     position: absolute;
     top: 0px;
@@ -91,7 +96,9 @@ canvas {
     height: 100%;
 }
 
-/* ---- stats.js ---- */
+/****/
+
+/** stats.js for particles **/
 .count-particles {
     background: #000022;
     position: absolute;
@@ -128,9 +135,10 @@ canvas {
     border-radius: 0 0 3px 3px;
 }
 
+/****/
 
 
-/* searchfield with dropdown and checkboxes */
+/** search-container with dropdown-menu and keyword search **/
 .search-container {
     z-index: 50;
     display: none;
@@ -202,10 +210,10 @@ canvas {
     }
 }
 
+/****/
 
 
-
-/* cards design */
+/** table with cards **/
 .row {
     margin-left: 7rem;
     margin-top: 2.5rem;
@@ -255,10 +263,6 @@ canvas {
     position: absolute;
 }
 
-/* .card-body:hover {
-    visibility: visible;
-} */
-
 .card-title {
     font-size: 2em;
     padding-left: 1.5em;
@@ -283,9 +287,10 @@ canvas {
     position: absolute;
 }
 
+/****/
 
 
-/* modal images + videos design */
+/** modal images + youtube **/
 .modal {
     display: block;
     position: fixed;
@@ -313,6 +318,20 @@ canvas {
     flex-direction: row;
 }
 
+.modal-header {
+    background-color: rgba(8, 8, 36, 0.39);
+    color: rgba(244, 245, 255, 0.911);
+    font-family: 'Space Mono', monospace;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.modal-title {
+    padding: 0em 0.5em;
+}
+
 .modal-body {
     display: flex;
     max-height: 90%;
@@ -331,41 +350,26 @@ canvas {
     object-fit: cover;
 }
 
-.modal-body-iframe {
-    width: 100%;
-    background-color: rgba(24, 24, 44, 0.452);
-    border: 0.11rem solid rgba(173, 173, 173, 0.911);
-    box-shadow: 1rem 1rem 5rem rgb(14, 13, 26);
-}
-
 .airtable-embed {
     width: 100%;
     height: 100%;
 }
 
-.modal-header {
-    /* background-color: rgba(8, 8, 36, 0.39); */
+.modal-iframe-header {
     background-color: rgb(2, 2, 31);
     color: rgba(244, 245, 255, 0.911);
     font-family: 'Space Mono', monospace;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
 }
 
-.modal-title {
+.modal-iframe-title {
     padding: 0em 0.5em;
 }
 
-.modal-iframe-header {
-    /* width: 100%;
-    padding: 0em 0.5em; */
-    /* background-color: rgba(8, 8, 36, 0.39); */
-    background-color: rgb(2, 2, 31);
-    color: rgba(244, 245, 255, 0.911);
-    font-family: 'Space Mono', monospace;
-    position: relative;
+.modal-body-iframe {
+    width: 100%;
+    background-color: rgba(24, 24, 44, 0.452);
+    border: 0.11rem solid rgba(173, 173, 173, 0.911);
+    box-shadow: 1rem 1rem 5rem rgb(14, 13, 26);
 }
 
 .close {
@@ -378,7 +382,6 @@ canvas {
 
 .buttonSpan {
     text-align: center;
-    /* line-height: 1.7rem; */
     padding-bottom: 0.3em;
     color: rgba(244, 245, 255, 0.911);
     font-family: 'Space Mono', monospace;
@@ -399,3 +402,5 @@ canvas {
     box-shadow: 0.1em 0 0.1em 0.1em rgba(0, 0, 0, 0.212);
     color: rgba(43, 49, 83, 0.925);
 }
+
+/****/
